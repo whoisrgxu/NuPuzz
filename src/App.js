@@ -58,7 +58,7 @@
     function handleClick(num, index) {
 
         if (index - 4 === newEmptyIdx || index + 4 === newEmptyIdx || (index + 1 === newEmptyIdx && (index + 1) % 4 !== 0) || (index - 1 === newEmptyIdx && index % 4 !== 0)) {
-            setTimeout(() => document.querySelector("audio").play(), 20);
+            document.querySelector("audio").play();
             const updatedArray = [...newArray];
             updatedArray[newEmptyIdx] = updatedArray[index];
             updatedArray[index] = null;
@@ -79,8 +79,8 @@
 
     // Include the array of cells inside numBox
     return (
-        <>
-            <button className="button" onClick={handleButtonClick}>Restart</button>
+        <div>
+            <div class="btn-div"><button className="button" onClick={handleButtonClick}>Restart</button></div>
             <div id="board">
                 <div className="numBox">
                     {newArray.map((num, index) => (
@@ -92,7 +92,7 @@
                     ))}
                 </div>
             </div>     
-        </>
+        </div>
     )    
   }
 
