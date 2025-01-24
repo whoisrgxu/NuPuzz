@@ -7,7 +7,7 @@
     // function to generate a random number array ranging from 1 to 15
     // and leave one eleent with null value
     function generateRandom () {
-
+        console.log("Generating Number!");
         let array = [];
         
         let temp = Math.floor(Math.random() * 15) + 1;
